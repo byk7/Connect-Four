@@ -1,0 +1,133 @@
+body {
+	background-color: rgba(33, 119, 121, 0.945);
+}
+
+h1 {
+	color: rgb(218, 248, 250);
+	font-family: fantasy;
+	font-size: 80px;
+	font-weight: 1000;
+	letter-spacing: 20px;
+	line-height: 1;
+	text-align: center;
+	margin: 50px 0 40px;
+}
+h2 {
+	color: rgb(221, 240, 135);
+	font-family: fantasy;
+	font-size: 40px;
+	font-weight: 500;
+	letter-spacing: 15px;
+	line-height: 30px;
+	margin: 0 0 10px;
+	text-align: center;
+}
+
+h3 {
+	color: rgb(243, 250, 244);
+	font-family: fantasy;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 30px;
+	margin: 0 0 20px;
+	text-align: center;
+}
+
+p {
+	color: rgb(246, 248, 236);
+	font-family: fantasy;
+	font-size: 20px;
+	line-height: 25px;
+	margin: 10 0 55px;
+	text-align: center;
+	text-justify: inter-word;
+}
+
+
+.button1 {
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background-color: rgb(10, 10, 245);
+	margin: 5px;
+}
+
+.button2 {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background-color: red;
+	margin: 5px;
+}
+
+table {
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#board td {
+	width: 75px;
+	height: 75px;
+	border: solid 1px tan;
+	border-width: thin;
+	border-radius: 50%;
+}
+
+#column-top td {
+	border: dashed 1px white;
+	border-radius: 50%;
+}
+
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+
+.p1 {
+	background-color: blue;
+	animation: backgroundsize 1s ease infinite alternate, drop .5s ease-in;
+}
+
+.p2 {
+	background-color: red;
+	animation: backgroundsize 1s ease infinite alternate, drop .5s ease-in;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+	/* TODO: make into circles  -- manipulate the border-radius*/
+	margin: 8px;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%; 
+	animation: backgroundsize 1s ease infinite alternate, drop .5s ease-in;		
+}
+
+@keyframes drop {
+	0% {
+		transform: translateY(-20rem);
+	}
+	40% {
+		transform: translateY(0);
+  	}
+	60% {
+		transform: translateY(-3rem);
+	}
+	100% {
+		transform: translateY(0em);
+	}
+}
+
+
+.replay {
+	appearance: none;
+	font-family: fantasy;
+	font-size: 20px;
+	background-color: rgb(42, 245, 52);
+	height: 50px;
+	width: 150px;
+	left: 50%;
+	top: 50%;
+	margin-top: 0px;
+	margin-left: 0px;
+	position: fixed;
+}
